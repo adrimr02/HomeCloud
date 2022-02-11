@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 8%;
+  background-color: #DFDFDF;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search_box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  background-color: #ddd;
+  width: fit-content;
+}
+
+.search_box input, button {
+  font-size: 18px;
+  outline: 0;
+  border: none;
+  padding: 5px;
+}
+
+#search_box__text {
+  border-radius: 10px 0 0 10px;
+  width: 75%;
+}
+
+#search_box__btn {
+  width: 20%;
+  border-radius: 0 10px 10px 0;
+  background-color: #C6C6C6;
+}
