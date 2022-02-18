@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Folder Name] | HomeCloud</title>
     <link rel="stylesheet" href="explorer.css">
+    <link rel="stylesheet" href="contextMenu.css">
   </head>
   <body>
     <div class="header">
@@ -15,7 +16,51 @@
       </form>
     </div>
     <div class="explorer">
-      
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
     </div>
+    <nav class="context-menu" id="context-menu">
+      <ul class="context-menu__items">
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-eye"></i> View Task
+          </a>
+        </li>
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-edit"></i> Edit Task
+          </a>
+        </li>
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-times"></i> Delete Task
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script src="contextMenu.js"></script>
+    <script src="https://kit.fontawesome.com/4dc5c8a814.js" crossorigin="anonymous"></script>
   </body>
 </html>

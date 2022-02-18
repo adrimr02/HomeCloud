@@ -39,3 +39,29 @@ html, body {
   border-radius: 0 10px 10px 0;
   background-color: #C6C6C6;
 }
+
+.explorer {
+  padding: 10px;
+}
+
+.element {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #C6C6C6;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.element:hover {
+  border: 2px solid lightskyblue;
+}
+
+.element h3 {
+  margin-left: 5px;
+  font-weight: bold;
+}
