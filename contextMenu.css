@@ -6,11 +6,13 @@
   border-radius: 10px;
   width: fit-content;
   padding: 5px;
-  background-color: #f0f0f0;
+  background-color: rgba(250, 250, 250);
 }
 
 .context-menu ul {
   list-style: none;
+  margin: 0;
+  padding: 5px 3px;
 }
 
 .context-menu--active {

@@ -9,13 +9,40 @@
     <link rel="stylesheet" href="contextMenu.css">
   </head>
   <body>
-    <div class="header">
-      <form class="search_box" onsubmit="event.preventDefault()">
-        <input type="text" name="search" id="search_box__text" placeholder="Busca en la carpeta">
-        <button type="submit" id="search_box__btn">Buscar</button>
-      </form>
+    <div class="header-container">
+      <a class="btn-home" href="">Inicio</a>
+        <header class="header">
+          <form class="search_box" onsubmit="event.preventDefault()" autocomplete="off">
+            <button type="submit" id="search_box__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" name="search" id="search_box__text" placeholder="Busca en la carpeta">
+          </form>
+        </header>
     </div>
     <div class="explorer">
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
+      <a class="element folder" href="">
+        <i class="fa-solid fa-folder fa-2xl"></i>
+        <h3>[Folder Name]</h3>
+      </a>
       <a class="element folder" href="">
         <i class="fa-solid fa-folder fa-2xl"></i>
         <h3>[Folder Name]</h3>

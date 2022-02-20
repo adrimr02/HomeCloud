@@ -5,53 +5,113 @@ html, body {
   padding: 0;
 }
 
+.header-container {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  border-bottom: 1px solid #CCC;
+}
+
+.header-container hr {
+  flex: 0 0 100%;
+}
+
 .header {
-  height: 8%;
-  background-color: #DFDFDF;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.btn-home {
+  display: inline-flex;
+  text-decoration: none;
+  color: #484848;
+  background: #DDD;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  height: 5vh;
+  width: 8%;
+  font-size: 3vh;
+  margin: 10px 20px;
+  margin-right: auto;
+  border: 1px solid transparent;
+}
+
+.btn-home:hover {
+  border: 1px solid #484848;
 }
 
 .search_box {
   display: flex;
+  height: 5vh;
   justify-content: center;
   align-content: center;
-  padding: 10px;
-  background-color: #ddd;
-  width: fit-content;
+  margin: 10px 5px;
+  padding: 3px;
+  border-radius: 12px;
+  background-color: #EEE;
+  width: 30%;
+  border: 1px solid transparent;
 }
 
 .search_box input, button {
-  font-size: 18px;
+  font-size: 2vh;
   outline: 0;
   border: none;
-  padding: 5px;
+  background-color: inherit;
 }
 
 #search_box__text {
-  border-radius: 10px 0 0 10px;
-  width: 75%;
+  width: 85%;
+  padding: 5px;
 }
 
 #search_box__btn {
-  width: 20%;
-  border-radius: 0 10px 10px 0;
-  background-color: #C6C6C6;
+  height: 5vh;
+  width: 0;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 50%;
+  width: 5vh;
+  cursor: pointer;
+}
+
+#search_box__btn:hover {
+  background-color: #DADADA;
+}
+
+.search_box:focus-within {
+  /* border: 1px solid #484848; */
+  background-color: white;
+  /* box-shadow: 1px 1px 2px; */
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 10%), -1px -1px 1px rgb(0 0 0 / 10%);
 }
 
 .explorer {
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
 }
 
 .element {
   display: flex;
-  padding: 5px;
-  margin: 5px;
+  padding: 5px 20px;
+  margin: 5px 20px;
   border-radius: 10px;
   border: 2px solid #C6C6C6;
-  width: fit-content;
   color: black;
+  width: fit-content;
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -64,4 +124,5 @@ html, body {
 .element h3 {
   margin-left: 5px;
   font-weight: bold;
+  color: #484848;
 }
