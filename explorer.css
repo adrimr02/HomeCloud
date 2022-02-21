@@ -3,7 +3,14 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
+
+/*
+ * /////////
+ * HEADER
+ * /////////
+ */
 
 .header-container {
   display: flex;
@@ -96,22 +103,70 @@ html, body {
   box-shadow: 1px 1px 1px rgb(0 0 0 / 10%), -1px -1px 1px rgb(0 0 0 / 10%);
 }
 
+/*
+ * /////////
+ * SIDEBAR
+ * /////////
+ */
+
+.sidebar {
+  position: fixed;
+  top: calc(8vh + 1px);
+  left: 0;
+  background-color: white;
+  height: calc(92vh - 1px - 20px);
+  width: 200px;
+  z-index: 2;
+  padding: 10px;
+}
+
+/*
+ * /////////
+ * EXPLORER
+ * /////////
+ */
+
+.main-section {
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: calc(92vh - 1px);
+}
+
+.route {
+  padding: 10px 20px;
+  height: 30px;
+}
+
+.route > h2 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.main-section hr {
+  border: none;
+  border-top: 1px solid #CCC;
+  margin: 0;
+} 
+
 .explorer {
   padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 10px;
+  column-gap: 50px;
+  height: calc(100% - 71px);
+  overflow: auto;
 }
 
 .element {
   display: flex;
   padding: 5px 20px;
-  margin: 5px 20px;
+  margin: 5px;
   border-radius: 10px;
   border: 2px solid #C6C6C6;
   color: black;
-  width: fit-content;
+  width: max-content;
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -125,4 +180,21 @@ html, body {
   margin-left: 5px;
   font-weight: bold;
   color: #484848;
+}
+
+.explorer::-webkit-scrollbar {
+  width: .6vw;
+}
+
+.explorer::-webkit-scrollbar-track {
+
+}
+
+.explorer::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #888;
+}
+
+.explorer::-webkit-scrollbar-button {
+  display: none;
 }
