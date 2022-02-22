@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="contextMenu.css">
   </head>
   <body>
-    <section class="header-container">
-      <a class="btn-home" href="">Inicio</a>
-      <header class="header">
-        <form class="search_box" onsubmit="event.preventDefault()" autocomplete="off">
-          <button type="submit" id="search_box__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <input type="text" name="search" id="search_box__text" placeholder="Busca en la carpeta">
-        </form>
-      </header>
-    </section>
+    <header class="header">
+      <form class="search_box" onsubmit="event.preventDefault()" autocomplete="off">
+        <button type="submit" id="search_box__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input type="text" name="search" id="search_box__text" placeholder="Busca en la carpeta">
+      </form>
+    </header>
     <section class="sidebar">
-      Menu lateral
+      <button class="new-btn"><i class="fa-solid fa-plus"></i>Nuevo</button>
+      <div class="new-menu">
+        <a href="">Nueva carpeta</a>
+        <a href="">Nuevo archivo</a>
+        <a href="">Subir archivo</a>
+      </div>
     </section>
     <section class="main-section">
       <div class="route">
