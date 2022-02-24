@@ -16,11 +16,11 @@
       </form>
     </header>
     <section class="sidebar">
-      <button class="new-btn"><i class="fa-solid fa-plus"></i>Nuevo</button>
-      <div class="new-menu">
-        <a href="">Nueva carpeta</a>
-        <a href="">Nuevo archivo</a>
-        <a href="">Subir archivo</a>
+      <button class="new-btn" onclick="showNewMenu()"><i class="fa-solid fa-plus fa-xl"></i>Nuevo</button>
+      <div class="new-menu" id="newMenu">
+        <button onclick="clickedMenuOption('new_folder')"><i class="fa-solid fa-folder-plus"></i>Nueva carpeta</button>
+        <button onclick="clickedMenuOption('new_file')"><i class="fa-solid fa-file-medical"></i>Nuevo archivo</button>
+        <button onclick="clickedMenuOption('upload_file')"><i class="fa-solid fa-file-arrow-up"></i>Subir archivo</button>
       </div>
     </section>
     <section class="main-section">
@@ -242,7 +242,10 @@
         </li>
       </ul>
     </nav>
-    <script src="contextMenu.js"></script>
+    <input type="file" id="inputFile" name="files" multiple>
+    <script src="js/helpers.js"></script>
+    <script src="js/explorer.js"></script>
+    <script src="js/contextMenu.js"></script>
     <script src="https://kit.fontawesome.com/4dc5c8a814.js" crossorigin="anonymous"></script>
   </body>
 </html>
