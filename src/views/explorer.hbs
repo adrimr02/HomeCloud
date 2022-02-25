@@ -1,0 +1,51 @@
+<section class="sidebar">
+      <button class="new-btn" onclick="showNewMenu()"><i class="fa-solid fa-plus fa-xl"></i>Nuevo</button>
+      <div class="new-menu" id="newMenu">
+        <button onclick="clickedMenuOption('new_folder')"><i class="fa-solid fa-folder-plus"></i>Nueva carpeta</button>
+        <button onclick="clickedMenuOption('new_file')"><i class="fa-solid fa-file-medical"></i>Nuevo archivo</button>
+        <button onclick="clickedMenuOption('upload_file')"><i class="fa-solid fa-file-arrow-up"></i>Subir archivo</button>
+      </div>
+    </section>
+    <section class="main-section">
+      <div class="route">
+        <h2>[Folder Route || Inicio]</h2>
+      </div>
+      <hr>
+      <div class="explorer">
+        {{#unless error }}
+          {{#each children }}
+            <a class="element folder" href="{{id}}">
+              <i class="fa-solid fa-folder fa-2xl"></i>
+              <h3>{{ name }}</h3>
+            </a>
+          {{else }}
+            <h2>Esta carpeta esta vacia</h2>
+          {{/each }}
+        {{else }}
+          <h2>{{error}}</h2>
+        {{/unless }}
+      </div>
+    </section>
+    <nav class="context-menu" id="context-menu">
+      <ul class="context-menu__items">
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-eye"></i> View Task
+          </a>
+        </li>
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-edit"></i> Edit Task
+          </a>
+        </li>
+        <li class="context-menu__item">
+          <a href="#" class="context-menu__link">
+            <i class="fa fa-times"></i> Delete Task
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <input type="file" id="inputFile" name="files" multiple>
+    <script src="js/helpers.js"></script>
+    <script src="js/explorer.js"></script>
+    <script src="js/contextMenu.js"></script>
