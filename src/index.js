@@ -7,20 +7,22 @@ const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-require('dotenv').config();
+const { initializeFileSystem } = require('./files/fileExplorer');
 
+require('dotenv').config();
+initializeFileSystem();
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
+app.set('views', join(__dirname, 'views'));
 
 //Setting up handlebars
 const hbs = exphbs.create({
   partialsDir: join(app.get('views'), 'partials'),
   extname: '.hbs',
 });
-app.set('views', join(__dirname, 'views'));
-app.engine('.hbs', hbs.engine);
-app.set('view engine', '.hbs');
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
 
 //Middlewares
 app.use(fileUpload({

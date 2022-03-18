@@ -1,0 +1,48 @@
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+  position: absolute;
+  top: calc(50vh - 15vh/2 - 10vh);
+  left: calc(50vw - 15vw/2);
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 15vw;
+  min-width: min-content;
+  height: 15vh;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 2vh;
+}
+
+.show {
+  display: block;
+}
+
+.modal h2 {
+  margin: 1vh 0;
+}
+
+.modal input {
+  height: 3vh;
+  font-size: 2.5vh;
+}
+
+.modal .buttons {
+  margin: 2px;
+}
+
+.modal button:hover {
+background-color: rgba(0,0,0,0.4);
+}

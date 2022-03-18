@@ -35,31 +35,35 @@ function clickedMenuOption(value) {
   }
 }
 
-function openNewFolderModal() {
-  console.log('New folder');
-}
-
-function openNewFileModal() {
-  console.log('New file');
-}
-
 function uploadFile() {
+  var data;
   var uploadFile = document.getElementById('inputFile');
   uploadFile.click();
   uploadFile.addEventListener('change', (e) => {
-    console.log('file selected');
     var files = e.target.files;
+    console.log(files) 
     if (files) {
-      fetch('http://localhost:3000/drive/upload', {
-        method: 'POST',
-        body: {
-          files: files
-        }
-      })
-      .then(res => {
-        console.log('Success: ', res)
-      })
-      .catch(err => console.error(err));
+      if (files.length <= 10) {
+        data = new FormData();
+        if (files.length <= 1)
+          data.append('file', files[0]);
+        else
+          for (let file of files) {
+            data.append('files', file);
+          }
+
+        console.log(data);
+        fetch('http://localhost:3000/drive/upload', {
+          method: 'PUT',
+          body: data
+        })
+        .then(res => {
+          console.log('Success: ', res)
+        })
+        .catch(err => console.error(err));
+      } else {
+        console.error('You can only upload 10 files at a time!');
+      }
     }
   });
 }

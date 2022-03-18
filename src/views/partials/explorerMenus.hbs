@@ -1,0 +1,38 @@
+<nav class="context-menu" id="context-menu">
+  <ul class="context-menu__items">
+    <li class="context-menu__item">
+      <a href="#" class="context-menu__link">
+        <i class="fa fa-eye"></i> View Task
+      </a>
+    </li>
+    <li class="context-menu__item">
+      <a href="#" class="context-menu__link">
+        <i class="fa fa-edit"></i> Edit Task
+      </a>
+    </li>
+    <li class="context-menu__item">
+      <a href="#" class="context-menu__link">
+        <i class="fa fa-times"></i> Delete Task
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="modal-wrapper" id="modalWrapper">
+  <div class="modal" id="modalNewFolder">
+    <h2>Nueva Carpeta</h2>
+    <input id="modalFolderText" type="text">
+    <div class="buttons">
+      <button id="modalFolderCancel" onclick="closeModal('modalNewFolder')">Cancelar</button>
+      <button id="modalFolderNext" disabled>Crear</button>
+    </div>
+  </div>
+  <div class="modal" id="modalNewFile">
+    <h2>Nuevo Archivo</h2>
+    <input id="modalFileText" type="text">
+    <div class="buttons">
+      <button id="modalFileCancel" onclick="closeModal('modalNewFile')">Cancelar</button>
+      <button id="modalFileNext" disabled>Crear</button>
+    </div>
+  </div>
+</div>
+<input type="file" id="inputFile" name="files" multiple>
